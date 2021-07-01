@@ -1,0 +1,11 @@
+import java.util.Scanner
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  val a, b, c = sc.nextInt()
+  var count = 0
+  for(x <- a to b){
+    if(c%x==0) count += 1
+  }
+  println(count)
+}
