@@ -1,0 +1,11 @@
+import java.util.Scanner
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  val w, h, x, y, r = sc.nextInt()
+  if(w>=x+r && h>=y+r && x >= 0 && y >= 0) {
+    println("Yes")
+  } else {
+    println("No")
+  }
+}
