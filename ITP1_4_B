@@ -1,0 +1,7 @@
+import java.util.Scanner
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  val r = sc.nextDouble()
+  println(f"${r*r*Math.PI}%f ${r*2*Math.PI}%f")
+}
