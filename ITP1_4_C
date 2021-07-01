@@ -1,0 +1,17 @@
+import java.util.Scanner
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  var tmp = true
+  var a = 0
+  while(tmp){
+    a = sc.nextInt()
+    sc.next() match {
+      case "+" => println(a+sc.nextInt())
+      case "-" => println(a-sc.nextInt())
+      case "/" => println(a/sc.nextInt())
+      case "*" => println(a*sc.nextInt())
+      case "?" => tmp = false
+    }
+  }
+}
