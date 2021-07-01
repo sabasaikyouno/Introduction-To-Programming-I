@@ -1,0 +1,8 @@
+import java.util.Scanner
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  val n = sc.nextInt()
+  val l = List.fill(n)(sc.nextBigInteger())
+  println(s"${l.min} ${l.max} ${l.reduceLeft((a,b)=>a.add(b))}")
+}
