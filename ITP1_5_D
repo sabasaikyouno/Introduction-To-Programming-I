@@ -1,0 +1,21 @@
+import java.util.Scanner
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  val n = sc.nextInt()
+  var s = ""
+  for(x <- 3 to n){
+    if(x%3 == 0) s += " "+x else if(x % 10 == 3) s+= " "+x else s += b(x,x)
+  }
+  println(s)
+  def b(i:Int,x:Int): String ={
+    if(i == 0){
+      ""
+    } else if( i % 10 == 3) {
+      " "+x
+    } else {
+      b(i/10,x)
+    }
+    
+  }
+}
