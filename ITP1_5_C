@@ -1,0 +1,33 @@
+import java.util.Scanner
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  var tmp = true
+  var h = 0
+  var w = 0
+  var s = ""
+  while(tmp) {
+    h = sc.nextInt()
+    w = sc.nextInt()
+    if(h==0&&w==0){
+      tmp = false
+    } else {
+      for(x<-1 to h){
+        if(x%2 == 0) {
+          for(i <- 1 to w){
+            if(i%2 == 0) s += "#" else s += "."
+          }
+          println(s)
+          s = ""
+        } else {
+          for(i <- 1 to w){
+            if(i%2 == 0) s += "." else s += "#"
+          }
+          println(s)
+          s = ""
+        }
+      }
+      println("")
+    }
+  }
+}
