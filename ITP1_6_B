@@ -1,0 +1,27 @@
+import java.util.Scanner
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  val n = sc.nextInt()
+  val l = List.fill(n)(sc.next(),sc.nextInt())
+  for(x <- 1 to 13){
+    if(!l.filter(_._1 == "S").contains("S",x)){
+      println("S "+x)
+    }
+  }
+  for(x <- 1 to 13){
+    if(!l.filter(_._1 == "H").contains("H",x)){
+      println("H "+x)
+    }
+  }
+  for(x <- 1 to 13){
+    if(!l.filter(_._1 == "C").contains("C",x)){
+      println("C "+x)
+    }
+  }
+  for(x <- 1 to 13){
+    if(!l.filter(_._1 == "D").contains("D",x)){
+      println("D "+x)
+    }
+  }
+}
