@@ -1,0 +1,21 @@
+import java.util.Scanner
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  val r, c = sc.nextInt()
+  val rc = List.fill(r,c)(sc.nextInt())
+  var ans = List()
+  for(x <- 0 until r){
+    println(rc(x).mkString(" ") + " " + rc(x).sum)
+  }
+
+  var tmp = 0
+  for(i <- 0 until c){
+    for(j <- 0 until r){
+      tmp += rc(j)(i)
+    }
+    print(tmp+" ")
+    tmp = 0
+  }
+  println(rc.map(_.sum).sum)
+}
