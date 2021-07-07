@@ -1,0 +1,23 @@
+import java.util.Scanner
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  var tmp = true
+  var m, f, r = 0
+  while(tmp){
+    m = sc.nextInt()
+    f = sc.nextInt()
+    r = sc.nextInt()
+    if((m,f,r) == (-1,-1,-1)){
+      tmp = false
+    } else {
+      if(m == -1 || f == -1) println("F")
+      else if(m + f >= 80) println("A")
+      else if(m + f >= 65) println("B")
+      else if(m + f >= 50) println("C")
+      else if(m + f >= 30 && r >= 50) println("C")
+      else if(m + f >= 30) println("D")
+      else println("F")
+    }
+  }
+}
