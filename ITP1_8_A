@@ -1,0 +1,9 @@
+import java.util.Scanner
+
+import scala.+:
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  val s = sc.nextLine()
+  println(s.map(x=>if(x.isUpper) x.toLower else x.toUpper))
+}
