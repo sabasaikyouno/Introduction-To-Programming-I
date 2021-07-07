@@ -1,0 +1,24 @@
+import java.util.Scanner
+
+import scala.+:
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  val n, m, l = sc.nextInt()
+  val nm = List.fill(n,m)(sc.nextLong())
+  val ml = List.fill(m,l)(sc.nextLong())
+  var ans = List[Long]()
+  var tmp = 0L
+
+  for(i <- 0 until n){
+    for(j <- 0 until l) {
+      for(k <- 0 until m){
+        tmp += nm(i)(k)*ml(k)(j)
+      }
+      ans = ans :+ tmp
+      tmp = 0
+    }
+    println(ans.mkString(" "))
+    ans = List[Long]()
+  }
+}
