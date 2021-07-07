@@ -1,0 +1,15 @@
+import java.util.Scanner
+
+import scala.+:
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  var tmp = true
+  while(tmp){
+    var x = sc.next()
+    if(x == "0") tmp = false
+    else {
+      println(x.map(_.asDigit).sum)
+    }
+  }
+}
