@@ -1,0 +1,9 @@
+import java.util.Scanner
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  val n, m = sc.nextInt()
+  val a = List.fill(n,m)(sc.nextInt())
+  val b = List.fill(m)(sc.nextInt())
+  a.map(_.zip(b).map{case (a,b) => a * b}.sum).foreach(println(_))
+}
