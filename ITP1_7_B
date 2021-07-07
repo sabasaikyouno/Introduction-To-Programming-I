@@ -1,0 +1,16 @@
+import java.util.Scanner
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  var tmp = true
+  var ans = 0
+  while(tmp){
+    var n,x = sc.nextInt()
+    if(n==0&&x==0) tmp = false
+    else {
+      for(i<-1 to n;j<-i+1 to n;k<-j+1 to n) if(i+j+k==x) ans += 1
+      println(ans)
+      ans = 0
+    }
+  }
+}
