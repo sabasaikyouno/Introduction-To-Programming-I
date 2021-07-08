@@ -1,0 +1,21 @@
+import java.util.Scanner
+
+import scala.+:
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  var str = sc.next()
+  val n = sc.nextInt()
+
+  for(i <- 1 to n){
+    var p = sc.next()
+    var a,b = sc.nextInt()
+    if(p == "replace") {
+      str = str.take(a) + sc.next() + str.drop(b+1)
+    } else if(p == "reverse") {
+      str = str.take(a) + str.substring(a,b+1).reverse + str.drop(b+1)
+    } else {
+      println(str.substring(a,b+1))
+    }
+  }
+}
