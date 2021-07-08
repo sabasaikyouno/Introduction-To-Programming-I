@@ -1,0 +1,18 @@
+import java.util.Scanner
+
+import scala.+:
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  val w = sc.next()
+  var tmp = true
+  var ans = 0
+  while(tmp) {
+    var t = sc.next()
+    if(t == "END_OF_TEXT") tmp = false
+    else {
+      if(t.toLowerCase() == w) ans += 1
+    }
+  }
+  println(ans)
+}
