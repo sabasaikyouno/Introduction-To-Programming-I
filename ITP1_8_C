@@ -1,0 +1,13 @@
+import java.util.Scanner
+
+import scala.+:
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  var s = ""
+  while(sc.hasNext()) s += sc.nextLine()
+  for(i <- 0 to 25){
+    var abc = ('a'+i).toChar
+    println(s"$abc : ${s.count( x => x==abc || x == abc.toUpper)}")
+  }
+}
