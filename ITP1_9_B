@@ -1,0 +1,20 @@
+import java.util.Scanner
+
+import scala.+:
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  var tmp = true
+  while(tmp){
+    var s = sc.next()
+    if(s=="-") tmp = false
+    else {
+      var m = sc.nextInt()
+      for(i <- 1 to m){
+        var h = sc.nextInt()
+        s = s.drop(h) + s.take(h)
+      }
+      println(s)
+    }
+  }
+}
