@@ -1,0 +1,9 @@
+import java.util.Scanner
+
+import scala.+:
+
+object Main extends App {
+  val sc = new Scanner(System.in)
+  var s, p = sc.next()
+  if((s*200).sliding(p.length).exists(_==p)) println("Yes") else println("No")
+}
